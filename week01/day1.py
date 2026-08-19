@@ -66,3 +66,32 @@ width = int(raw_width)
 area = length * width
 
 print (f"Area of rectangle length {length} and width {width} is {area}")
+
+
+# 3. convert celcius into farenheit
+
+raw_temp = input("Enter temperature in celcius: ")
+while not raw_temp.isdigit():
+    print("Invalid input! Please enter digits only.")
+    raw_temp = input("Enter temperature as a digit. ")
+celcius = int(raw_temp)
+
+fahrenheit = (celcius * (9/5)) + 32
+
+print(f"Converted temperature is {fahrenheit:.2f}")
+
+
+# 4. Calculate age from birth year
+from datetime import datetime
+
+current_year = datetime.now().year
+
+raw_birthYear = input("Enter birth year: ")
+while not raw_birthYear.isdigit():
+    print("Invalid input! Please enter digits only.")
+    raw_birthYear = input("Enter birth year as digits. ")
+birthYear = int(raw_birthYear)
+
+age = current_year - birthYear
+
+print(f"Age is {age}")
