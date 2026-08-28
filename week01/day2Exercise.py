@@ -12,7 +12,7 @@ while not age.isdigit():
     print("I'll need your age as a number")
     age= input("Enter your age: ")
 age=int(age)    
-if age < 0 or age > 125:
+if age <= 0 or age > 125:
     print("Either you don't know the concept of age or you should pay a visit to the Guiness Book of World Records")
     age=(input("Enter your age. Seriously this time: "))  
     age=int(age)
@@ -25,7 +25,7 @@ print(f"{thanks}")
 while True:
     try:
         height = float(input("What's your height in metres? "))
-        if height < 0 or height > 4:
+        if height <= 0 or height > 4:
             print("Either you don't know the concept of height or you should pay a visit to the Guiness Book of World Records")  
             continue
         break
@@ -95,7 +95,7 @@ if first_number == second_number:
 else:
     print("An error occurred")
 
-sum = first_number + second_number
+total = first_number + second_number
 difference = first_number - second_number
 product = first_number * second_number
 division = first_number / second_number
@@ -104,7 +104,7 @@ firstNumberEven = first_number % 2 == 0
 secondNumberEven = second_number % 2 == 0
 
 print(f"""
-Their sum: {sum}
+Their sum: {total}
 Their difference: {difference}
 Their product: {product}
 Their division: {division}

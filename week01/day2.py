@@ -75,12 +75,13 @@ MoreOrEqual = 10>=5
 LessOrEqual = 10<=5 
 
 print (f"""
+For the numbers 10 and 5:
 Equality: {equality}
 Not Equal: {notEqual}
 More Than: {moreThan}
 Less Than: {lessThan}
-More or Equal: {MoreOrEqual}
-Less or Equal: {LessOrEqual}
+More or Equal to: {MoreOrEqual}
+Less or Equal to: {LessOrEqual}
 """)
 
 # Part 8: = vs ==
