@@ -1,4 +1,3 @@
-
 #1. Creating and acessing lists
 students = ["Shawn", "Alex", "Abdullahi", "Brian", "Samuel"]
 
@@ -190,3 +189,41 @@ for student in students:
     break
 else:
   print(f"{ask} is not in the list")    
+
+
+#11. Search student by name and index
+
+ask = input("Enter student name: ")
+
+students = ["Shawn", "Alex", "Abdullahi", "Brian", "Samuel"]
+
+for student in range(0,len(students),1):
+  if ask == students[student]:
+    print(f"{ask} is at index {(student)}")
+    break
+else:
+  print(f"{ask} is not in the list") 
+
+
+#12. Retrieving student name and score in nested list
+
+ask = input("Enter student's name: ")
+
+students = [
+    ["Shawn", 72],
+    ["Alex", 85],
+    ["Abdullahi", 64],
+    ["Brian", 91]
+]
+
+for student in range (0, len(students), 1):
+    name = students[student][0]
+    score = students[student][1]
+    if ask == name:  
+      print(f"""
+      Student: {name} 
+      Score: {score}
+      """)
+      break 
+else:
+  print(f"{ask} is not in the list")   
