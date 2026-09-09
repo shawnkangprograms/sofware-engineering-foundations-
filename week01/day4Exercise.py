@@ -9,12 +9,12 @@ print(f"{greetVariable}")
 print("After")
 
 #Exercise 2 - Arithmetic Function (addition)
-def arithmetic(a, b):
-    str_a = input("Enter the first number: ")
-    str_b = input("Enter the second number: ")
-    a = int(str_a)
-    b = int(str_b)
+str_a = input("Enter the first number: ")
+str_b = input("Enter the second number: ")
+a = int(str_a)
+b = int(str_b)
 
+def arithmetic(a, b):    
     result = a + b
     return result
 
@@ -104,3 +104,28 @@ def returnTest():
     return returnTesting
 
 returnTestVariable = returnTest()
+
+# default parameters exercise
+def greet(name = "Guest"):
+    name=input("Enter your name: ")
+    returnName = name
+
+    return returnName
+
+returnNameVariable = greet()
+print(f"{returnNameVariable}")
+
+# calculating area of a rectangle
+str_length = input("Enter length: ")
+str_width = input("Enter width: ") 
+length = int(str_length)
+width = int(str_width)
+
+def rectangleArea(length, width):
+    area = length * width
+    return area
+
+print(rectangleArea(length, width))
+
+areaVariable = rectangleArea(length, width)
+print(f"Area of rectangle is {areaVariable}")
