@@ -67,3 +67,24 @@ for student in range (0, len(students), 1):
     break  
 else:
   print(f"{info} is not in the list")
+
+
+# LEETCODE TWO SUM (BRUTEFORCE METHOD)
+numbers = [2,7,11,15]
+target = int(input("Enter the target number: "))
+matching_pair = False
+
+for first_number in range(0,len(numbers), 1):
+  first = numbers[first_number]
+  for second_number in range(0, len(numbers), 1):
+    second = numbers[second_number]
+    
+    if first + second == target:
+      print(f"{first} and {second} add up to {target}")
+      print(f"{first} is index {(first_number)} and {second} is index {(second_number)}")
+      matching_pair = True
+      break
+  if matching_pair == True:
+    break
+if matching_pair == False:
+  print(f"No values add up to {target}")
