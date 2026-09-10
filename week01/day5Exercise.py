@@ -45,3 +45,25 @@ print(f"""
 
 
 # ASSESSMENT
+students = [
+    ["Shawn", 72],
+    ["Alex", 85],
+    ["Abdullahi", 64],
+    ["Brian", 91],
+    ["Samuel", 78]
+]
+
+info = input("Enter student's name: ")
+
+for student in range (0, len(students), 1):
+  name = students[student][0]
+  score = students[student][1]
+  if info == name:
+    print(f"""
+    Student: {info}
+    Score: {score}
+    Position in list: {(student)}
+    """)
+    break  
+else:
+  print(f"{info} is not in the list")
