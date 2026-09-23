@@ -1,0 +1,35 @@
+#1. LEETCODE TWO SUM (BRUTEFORCE METHOD)
+numbers = [2,7,11,15]
+target = int(input("Enter the target number: "))
+matching_pair = False
+
+for first_number in range(0,len(numbers), 1):
+  first = numbers[first_number]
+  for second_number in range(0, len(numbers), 1):
+    second = numbers[second_number]
+    
+    if first + second == target:
+      print(f"{first} and {second} add up to {target}")
+      print(f"{first} is index {(first_number)} and {second} is index {(second_number)}")
+      matching_pair = True
+      break
+  if matching_pair == True:
+    break
+if matching_pair == False:
+  print(f"No values add up to {target}")
+
+
+#2. Detecting missing number in list
+
+inputs = [9, 6, 4, 2, 3, 5, 7, 0, 1]
+expects = [0,1,2,3,4,5,6,7,8,9]
+
+for expect in expects:
+  found = False
+  for input in range(0, len(inputs), 1):
+    if inputs[input] == expect:
+      found = True
+
+  if found == False:
+    missing = expect
+    print(f"Missing number: {missing}")
